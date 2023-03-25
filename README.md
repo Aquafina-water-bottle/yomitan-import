@@ -69,7 +69,7 @@ may cause the conversion process to fail.
     ```
 
 ## Building Dictionaries
-If you have successfully built the `yomichan` binary (`yomichan-gtk` does not need to be successfully built),
+If you have successfully built the `yomitan` binary (`yomitan-gtk` does not need to be successfully built),
 then you should be able to run the `./build_dicts.sh` script, in order to build
 all JMdict-related dictionaries.
 

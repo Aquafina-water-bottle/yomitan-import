@@ -1,15 +1,20 @@
 #!/bin/sh
 
-mkdir -p dst
-mkdir -p yomichan-import
+rm -rf yomitan-import
 
-# TODO: properly output as yomitan
+mkdir -p dst
+mkdir -p yomitan-import
+
 export CXX=x86_64-w64-mingw32-g++.exe
 export CC=x86_64-w64-mingw32-gcc.exe
-go build foosoft.net/projects/yomichan-import/yomichan
-go build -ldflags="-H windowsgui" foosoft.net/projects/yomichan-import/yomichan-gtk
 
-mv yomichan.exe yomichan-import
-mv yomichan-gtk.exe yomichan-import
+go get github.com/themoeway/yomitan-import/yomitan
+go get github.com/themoeway/yomitan-import/yomitan-gtk
 
-7za a dst/yomichan-import_windows.zip yomichan-import/*.exe
+go build github.com/themoeway/yomitan-import/yomitan
+go build -ldflags="-H windowsgui" github.com/themoeway/yomitan-import/yomitan-gtk
+
+mv yomitan.exe yomitan-import
+mv yomitan-gtk.exe yomitan-import
+
+7za a dst/yomichan-import_windows.zip yomichan-import

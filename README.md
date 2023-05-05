@@ -81,3 +81,6 @@ You will also have to add the GOPATH's `bin` folder to your `$PATH` environment 
 ```bash
 export PATH=$PATH:$GOPATH/bin
 ```
+
+## Related Projects
+- [stephenmk/jitenbot](https://github.com/stephenmk/jitenbot): A program for scraping Japanese dictionary websites and compiling the scraped data into compact dictionary file formats, including Yomitan dictionaries.
